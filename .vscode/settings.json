@@ -1,0 +1,9 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.cursorHeight": 50,
+    "editor.fontSize": 16,
+    "css.styleSheets": [
+        
+    ],
+    "editor.cursorWidth": 3
+}

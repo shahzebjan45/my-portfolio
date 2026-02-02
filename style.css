@@ -1,0 +1,982 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins" , "sans-sarif";
+}
+body{
+    color: #ededed;
+   background:  #021b2a;
+}
+.header{
+    position: relative;
+    top: 0;
+    left:0;
+    height: 70px;
+    width: 100%;
+    background:transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    
+   
+
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    margin-left:30px;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size: 20;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: -3s;
+    margin-right: 20px;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+     
+}
+.navbar a:hover{
+    color: #0ef;
+     
+}
+
+
+#menu-icon{
+   
+    font-size: 22px;
+      margin: 10px 23px 0px  0px;
+     margin-right: 13px;
+}
+#menu-icon:hover{
+     color: #0ef;
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh; 
+    background: url(hero4.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    align-items: center;
+    padding: 70px 10px 0;
+     
+     
+     
+}
+
+.home-content{
+    max-width: 600px;
+    margin-left: 49px;
+
+}
+.home-content h3{
+    font-size: 30px;
+    font-weight: 700px;                         
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: -7s;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom:30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: -7s;
+}
+.home-content h3 span{
+ color: #0ef;
+}
+.home-content h1{
+    font-size: 45px;
+    font-weight: 700px;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-content p{
+    font: size 16px; 
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height:40px;
+    background: transparent;
+    border:2px solid #0ef;
+    border-radius: 50%;
+    font-size: 25px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0px;
+
+    transform: .5s ease;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+.home-sci a:hover{
+    background: #0ef;
+    color: #001b29;
+      box-shadow: 0 0 20px #0ef;
+}
+.btn-box{
+    display: inline-block;
+    padding:12px 20px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color:  #001b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay:2s ;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan,
+    0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan  ;
+}
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 30px;
+   
+   margin-top: 20px;
+}
+
+.about-img img{
+padding-bottom: 8px;
+max-width: 550px;
+height: auto;
+width: 100%;
+border-radius: 50%;
+background-color: #021b2a;
+background-color: transparent;
+ 
+}
+.about-text h2{
+    font-size: 60px;
+    z-index: 1000;
+}
+.about-text h2 span{
+    color: #0ef;
+    z-index: 1000;
+}
+
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600px;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+    z-index: 1000;
+}
+
+.about-text p{
+    color:aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+    z-index: 1000;
+
+}
+  /* services */
+#services {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+.container {
+    padding: 90px;
+}
+
+/* --- SERVICES SECTION FIX (3 Boxes in One Line) --- */
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Boxes ko darmiyan mein lane ke liye */
+    gap: 30px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.services-list div {
+    flex: 1 1 300px; /* Ye 3 boxes ko ek line mein fit karega */
+    max-width: 360px; /* Boxes ko bahut zyada phailne se rokega */
+    background-color: transparent;
+    padding: 40px;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7,
+                1px 1px 40px #0053b8f7;
+    text-align: center; /* Box ke andar ka content center karne ke liye */
+}
+
+.services-list div:hover {
+    transform: translateY(-10px);
+}
+
+
+ 
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 1s;
+    box-shadow: 0 0 5px #0ef,
+                0 0 25px #0ef;
+}
+.read:hover {
+    box-shadow: 0 0 5px cyan,
+                0 0 25px cyan, 0 0 50px cyan,
+                0 0 100px cyan, 0 0 200px cyan;
+}
+
+.services-list div:hover {
+    transform: translateY(-10px);
+}
+
+
+/* Box ke hover par icon ka color change karne ke liye */
+.services-list div:hover i {
+    color: #0ef;
+    text-shadow: 0 0 15px #0ef; /* Isse icon glow karega */
+}
+/* Modal ka main dabba */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Thoda zyada dark taaki focus modal par rahe */
+    backdrop-filter: blur(5px); /* Background dhundla karne ke liye */
+}
+
+/* Modal ke andar ka white/dark box */
+.modal-content {
+    background-color: #1f242d; 
+    margin: 10% auto;
+    padding: 40px;
+    border: 2px solid #0ef;
+    width: 50%; /* Desktop par width */
+    max-width: 600px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 0 25px #0ef;
+    position: relative;
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #0ef;
+}
+
+#modalTitle {
+    color: #0ef;
+    font-size: 30px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+#modalDesc {
+    line-height: 1.8; /* Lines ke darmiyan behtar gap */
+    font-size: 17px;
+    color: #ddd;
+    text-align: justify; /* Text barabar dikhega dono sides se */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .modal-content { width: 85%; margin: 20% auto; }
+}
+
+/* skill */
+
+/* --- SECTION LAYOUT FIX --- */
+
+#skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Isse left aur right side door rahengi */
+    align-items: flex-start;
+    padding: 75px 5%; /* Side spacing thodi kam ki hai taaki jagah banay */
+    gap: 20px;
+}
+
+.container1, .radial-bars-container {
+    flex: 1; /* Dono containers ko barabar jagah dene ke liye */
+    min-width: 400px; /* Mobile par automatic ek ke niche ek aane ke liye */
+    max-width: 600px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+/* --- TECHNICAL BARS (Linear) --- */
+.bar { font-size: 23px; }
+
+.Technical-bars .bar { margin-top: 40px; }
+.Technical-bars .bar:first-child { margin-top: 0; }
+.Technical-bars .bar:last-child { margin-bottom: 0; }
+
+.Technical-bars .bar .info { margin-bottom: 5px; }
+
+.Technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.Technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* Linear Progress Widths */
+.progress-line.html span { width: 90%; }
+.progress-line.css span { width: 60%; }
+.progress-line.javascript span { width: 85%; }
+.progress-line.python span { width: 50%; }
+.progress-line.react span { width: 75%; }
+
+/* Tooltips */
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progress-line.html span::after { content: "90%;" }
+.progress-line.css span::after { content: "60%;" }
+.progress-line.javascript span::after { content: "85%;" }
+.progress-line.python span::after { content: "50%;" }
+.progress-line.react span::after { content: "75%;" }
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0; height: 0;
+    border: 7px solid transparent;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+/* --- RADIAL BARS (Circles) --- */
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stroke: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 { animation: animate-path1 1s 1s linear forwards; }
+.path-2 { animation: animate-path2 1s 1s linear forwards; }
+.path-3 { animation: animate-path3 1s 1s linear forwards; }
+.path-4 { animation: animate-path4 1s 1s linear forwards; }
+
+.radial-bar .percentage, .radial-bar .text {
+    position: absolute;
+    left: 50%;
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .percentage {
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radial-bar .text {
+    width: 100%;
+    text-align: center;
+    bottom: -15px;
+    transform: translateX(-50%);
+}
+
+
+
+/* projects */
+ 
+
+.project-section {
+    padding: 80px 8%;
+    
+     
+}
+
+.project-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.project-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.project-header h2 span {
+    color: #0ef;;
+}
+
+.project-header p {
+    color: var(--grey);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Grid Layout */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Card Style */
+.project-card {
+ background:  #021b2a;
+ color: wheat;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-bottom-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.project-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay on Hover */
+/* Container settings */
+.project-image {
+    position: relative;
+    overflow: hidden; /* Overlay ko andar rakhne ke liye */
+    border-radius: 12px;
+}
+
+/* 1. Overlay ki initial state (Neeche chupa hua) */
+.project-overlay {
+    position: absolute;
+    bottom: -100%; /* Bilkul neeche bhej diya */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(76, 175, 79, 0.9); /* Nexcent Green Theme */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out; /* Smooth sliding effect */
+    z-index: 2;
+}
+
+/* 2. Hover Effect (Jab mouse upar aaye to color upar slide ho) */
+.project-card:hover .project-overlay {
+    bottom: 0; /* Neeche se slide hokar apni jagah par aa jayega */
+}
+
+/* 3. Button aur Text styling inside overlay */
+.view-project-btn {
+    padding: 12px 25px;
+    background-color: white;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.view-project-btn:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.1); /* Button thoda bara hoga */
+}
+
+.project-content h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.view-project-btn {
+    padding: 10px 25px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* Content Area */
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    color: var(--grey);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Tags Styling */
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background: var(--silver);
+    color: var(--dark);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+
+
+
+.contact-section {
+    padding: 100px 8%;
+    background-color: #081b29; /* Dark Background */
+    color: white;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.contact-info h2 span {
+    color: #00eeff; /* Neon Cyan */
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.info-details .info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: #00eeff;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #00eeff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00eeff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #00eeff;
+    color: #081b29;
+    box-shadow: 0 0 15px #00eeff;
+}
+
+/* Form Styling */
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    padding: 15px;
+    background: #112e42;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    padding: 15px;
+    background: #00eeff;
+    border: none;
+    border-radius: 30px;
+    color: #081b29;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px #00eeff; /* Glowing Button */
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    box-shadow: none;
+    transform: translateY(3px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .contact-container { flex-direction: column; }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .project-section { padding: 50px 5%; }
+}
+
+
+/* --- KEYFRAMES --- */
+@keyframes animate { 100% { transform: scaleX(1); } }
+@keyframes animate-bar { 100% { stroke-dashoffset: -1; } }
+@keyframes showText { 100% { opacity: 1; } }
+
+@keyframes animate-path1 { 100% { stroke-dashoffset: 50; } }
+@keyframes animate-path2 { 100% { stroke-dashoffset: 175; } }
+@keyframes animate-path3 { 100% { stroke-dashoffset: 125; } }
+@keyframes animate-path4 { 100% { stroke-dashoffset: 75; } }
+
+
+
+@keyframes slideRight {
+    0%{
+         transform: translateX(-100px);
+         opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0%{
+         transform: translateX(100px);
+         opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+ 
+@keyframes  slideTop {
+    0%{
+         transform: translateY(100px);
+         opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+ 
+ @keyframes  slideBottom {
+    0%{
+         transform: translateY(-100px);
+         opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+   /* this is media qurery tags  for the responsivness of the page */
+/* 1. Laptops aur Choti Screens (1024px - 1200px) */
+@media (max-width: 1200px) {
+    .home-content h1 { font-size: 40px; }
+    .about-text h2 { font-size: 50px; }
+    .container { padding: 50px; }
+}
+
+/* 2. Tablets (768px - 1024px) */
+@media (max-width: 992px) {
+    .header { padding: 0 4%; }
+    
+    .home {
+        flex-direction: column-reverse; /* Mobile/Tablet par image upar ya niche karne ke liye */
+        justify-content: center;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .home-content { margin-left: 0; max-width: 100%; }
+    
+    .about {
+        grid-template-columns: 1fr; /* 2 columns se 1 column kar diya */
+        text-align: center;
+    }
+
+    .about-img img { max-width: 400px; margin: 0 auto; }
+
+    #skill { flex-direction: column; align-items: center; }
+    .container1, .radial-bars-container { width: 100%; min-width: 100%; }
+}
+
+/* 3. Small Mobile Phones (320px - 767px) */
+@media (max-width: 767px) {
+    .logo { font-size: 20px; }
+    
+    /* Navbar ko mobile par handle karna */
+    .navbar a {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+
+    .home-content h1 { font-size: 32px; }
+    .home-content h3 { font-size: 22px; }
+    
+    .about-text h2 { font-size: 40px; }
+    .about-text h4 { font-size: 22px; }
+    .sub-title { font-size: 40px; padding-bottom: 40px; }
+
+    /* Services boxes mobile par full width */
+    .services-list div {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .contact-info h2 { font-size: 2.5rem; }
+    
+    /* Skills Bars mobile par thodi choti */
+    .radial-bars .radial-bar { width: 100%; }
+}
+
+/* 4. Extra Small Phones (Below 480px) */
+@media (max-width: 480px) {
+    .header {
+        height: auto;
+        padding: 15px 2%;
+        flex-direction: column; /* Logo aur Nav ko ek ke niche ek kar diya */
+    }
+    .navbar { margin-top: 10px; }
+    .navbar a { margin: 0 5px; font-size: 12px; }
+
+    .home-content h1 { font-size: 28px; }
+    .btn-box, .read { padding: 10px 18px; font-size: 14px; }
+    
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
