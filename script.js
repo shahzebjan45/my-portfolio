@@ -1,4 +1,4 @@
- console.log("hello sir this my new porfolio page you can see my page there is a little bit issue in my link becuse of secutrity of th echroe browase")
+ 
  
  var typed = new Typed(".text" ,{
     strings:["Frontend Development", "basic python", "backing Development", "Mearn Stack Development"],
