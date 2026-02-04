@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: "poppins" , "sans-sarif";
 }
+html {
+    scroll-behavior: smooth;
+}
 body{
     color: #ededed;
    background:  #021b2a;
@@ -161,6 +164,7 @@ background-color: transparent;
     animation-delay:2s ;
     box-shadow: 0 0 5px #0ef,
     0 0 25px #0ef;
+    z-index: 10;
 }
 .btn-box:hover{
     box-shadow: 0 0 5px cyan, 0 0 25px cyan,
@@ -318,10 +322,10 @@ background-color: transparent;
 .modal {
     display: none; 
     position: fixed;
-    z-index: 1000;
+    z-index: 2000;
     left: 0; top: 0;
     width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Thoda zyada dark taaki focus modal par rahe */
+    background-color: rgba(0, 0, 0, 0.9); /* Thoda zyada dark taaki focus modal par rahe */
     backdrop-filter: blur(5px); /* Background dhundla karne ke liye */
 }
 
@@ -446,35 +450,27 @@ background-color: transparent;
 .progress-line.react span { width: 75%; }
 
 /* Tooltips */
+/* Tooltips ko khatam karne ke liye ye code dhoond kar delete kar dein ya replace karein */
 .progress-line span::after {
-    position: absolute;
-    padding: 1px 8px;
-    background-color: #000;
-    color: #fff;
-    font-size: 12px;
-    border-radius: 3px;
-    top: -28px;
-    right: -20px;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
+    display: none; /* Percentages ko hide kar diya */
 }
 
-.progress-line.html span::after { content: "90%;" }
-.progress-line.css span::after { content: "60%;" }
-.progress-line.javascript span::after { content: "85%;" }
-.progress-line.python span::after { content: "50%;" }
-.progress-line.react span::after { content: "75%;" }
-
 .progress-line span::before {
-    content: "";
-    position: absolute;
-    width: 0; height: 0;
-    border: 7px solid transparent;
-    border-top-color: #000;
-    top: -10px;
-    right: 0;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
+    display: none; /* Chota triangle hide kar diya */
+}
+
+/* Labels ko thoda behtar dikhane ke liye */
+.info span small {
+    color: #0ef;
+    font-size: 12px;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/* Circles ke andar icons ki styling */
+.radial-bar .percentage i {
+    font-size: 30px;
+    color: #0ef;
 }
 
 /* --- RADIAL BARS (Circles) --- */
@@ -511,13 +507,15 @@ background-color: transparent;
     animation: animate-bar 1s linear forwards;
 }
 
+/* Golden Theme */
 .path {
     stroke-width: 10;
-    stroke: #0ef;
+    stroke: #ffbd39; /* Golden Yellow */
     fill: transparent;
     stroke-dasharray: 502;
     stroke-dashoffset: 502;
     stroke-linecap: round;
+    filter: drop-shadow(0 0 5px #ffbd39); /* Thodi si chamak (glow) ke liye */
 }
 
 .path-1 { animation: animate-path1 1s 1s linear forwards; }
@@ -544,6 +542,7 @@ background-color: transparent;
     text-align: center;
     bottom: -15px;
     transform: translateX(-50%);
+    color: #ffbd39;
 }
 
 
@@ -891,6 +890,68 @@ background-color: transparent;
     }
 }
 
+
+
+
+/* home tab btn style */
+
+
+/* style.css ke end mein */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 9999; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.9); /* Dark background overlay */
+}
+
+.modal-content { 
+    background-color: #081b29; 
+    margin: 10% auto; 
+    padding: 30px; 
+    border: 2px solid #0ef; 
+    width: 60%; 
+    color: white; 
+    border-radius: 15px; 
+    box-shadow: 0 0 25px #0ef; 
+    position: relative;
+}
+
+.timeline { 
+    border-left: 2px solid #0ef; 
+    padding-left: 25px; 
+    margin-top: 25px; 
+}
+
+.time-item { 
+    margin-bottom: 25px; 
+    position: relative; 
+    font-size: 1.1rem;
+}
+
+.time-item::before { 
+    content: ''; 
+    position: absolute; 
+    left: -32px; 
+    top: 5px; 
+    width: 14px; 
+    height: 14px; 
+    background: #0ef; 
+    border-radius: 50%; 
+    box-shadow: 0 0 10px #0ef;
+}
+
+.close { 
+    color: #0ef; 
+    position: absolute; 
+    right: 20px; 
+    top: 10px; 
+    font-size: 35px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
 /* --- RESPONSIVE MEDIA QUERIES --- */
    /* this is media qurery tags  for the responsivness of the page */
 /* 1. Laptops aur Choti Screens (1024px - 1200px) */
@@ -967,7 +1028,8 @@ background-color: transparent;
         flex-direction: column; /* Logo aur Nav ko ek ke niche ek kar diya */
     }
     .navbar { margin-top: 10px; }
-    .navbar a { margin: 0 5px; font-size: 12px; }
+    .navbar a { margin: 0 5px; font-size: 12px; 
+    justify-content: space-evenly;}
 
     .home-content h1 { font-size: 28px; }
     .btn-box, .read { padding: 10px 18px; font-size: 14px; }

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<script async src="script.js"></script>
+
  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -20,10 +20,10 @@
        <a href="#home" style="--i:1"  > Home</a>
        <a href="#about" style="--i:2">About</a>
        <a href="#skill " style="--i:3">Skill</a>
-       <a href="#projects" style="--i:4">Porfolio</a>
+       <a href="#projects" style="--i:4">Portfolio</a>
        <a href="#contact" style="--i:5">contact</a>
 
-       <i class='bx bx-menu' id="menu-icon"></i>
+       
      </nav>
     
     </header>
@@ -33,7 +33,7 @@
             <h3>Hello It's Me</h3>
             <h1> Captan Shahzeb</h1>
             <h3>And I'm a <span class="text"></span>   </h3> 
-            <p>a Computer Science graduate and a passionate web development learner. I’m currently focused on building clean, responsive websites using HTML and CSS.  I enjoy turning ideas into simple and user-friendly designs,  and I’m continuously learning to become a better developer.</p>
+            <p>A Computer Science graduate and a passionate web development learner. I’m currently focused on building clean, responsive websites using HTML and CSS.  I enjoy turning ideas into simple and user-friendly designs,  and I’m continuously learning to become a better developer.</p>
         
         <div class="home-sci">
         <a href="https://www.facebook.com/share/1AcYFECDpW/" style="--i:7"><i class="fa-brands fa-facebook"></i></a>
@@ -41,8 +41,7 @@
         <a href="https://wa.me/qr/5MO7SGF3HKLMM1" style="--i:9"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="https://www.linkedin.com/in/shah-zeb-8bab80228?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" style="--i:10"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-        <a href="#" class="btn-box">More about me</a>
-          
+     <a href="#services" id="home-btn" class="btn-box">View My Services</a>
         </div>
         <div class="home-img" >
            <img src="hro.jpeg" alt="">
@@ -61,7 +60,7 @@
             <h4>Mearn Stack Developer</h4>
             <p>I am a Computer Science graduate and an aspiring MERN Stack full-stack developer. I am currently building my skills in MongoDB, Express.js, React.js, and Node.js, with a strong focus on creating responsive, scalable, and user-friendly web applications. I enjoy working on both frontend and backend development and continuously improving my skills through real-world projects. My goal is to grow as a professional full-stack developer and contribute to impactful and innovative software solutions.</p>
 
-            <a href="#" class="btn-box"> More About Me` </a>
+           <a href="#" id="about-modal-btn" class="btn-box">More About Me</a>
             
 
         </div>
@@ -101,84 +100,81 @@
         <h1 class="heading1">Technical Skills</h1>
         <div class="Technical-bars">
             
-            <div class="bar" ><i  style="color: #c95d2e "class='bx bxl-html5'></i>
+            <div class="bar"><i style="color: #c95d2e" class='bx bxl-html5'></i>
                 <div class="info">
-                    <span>HTML</span>
+                    <span>HTML <small style="color: #0ef; font-size: 14px; font-style: italic;">(Proficient)</small></span>
                 </div>
                 <div class="progress-line html">
                     <span></span>
                 </div>
             </div>
 
-            <div class="bar" ><i  style="color: #147bbc"class='bx bxl-css3'></i>
+            <div class="bar"><i style="color: #147bbc" class='bx bxl-css3'></i>
                 <div class="info">
-                    <span>CSS</span>
+                    <span>CSS <small style="color: #0ef; font-size: 14px; font-style: italic;">(Intermediate)</small></span>
                 </div>
                 <div class="progress-line css">
                     <span></span>
                 </div>
             </div>
 
-            <div class="bar"><i style="color: #b0bc1e;"  class='bx bxl-javascript'></i>
+            <div class="bar"><i style="color: #b0bc1e;" class='bx bxl-javascript'></i>
                 <div class="info">
-                    <span>Javascript</span>
+                    <span>Javascript <small style="color: #0ef; font-size: 14px; font-style: italic;">(Learning)</small></span>
                 </div>
                 <div class="progress-line javascript">
                     <span></span>
                 </div>
             </div>
 
-            <div class="bar"><i style="color: #c32ec9 " class='bx bxl-python'></i>
+            <div class="bar"><i style="color: #c32ec9" class='bx bxl-python'></i>
                 <div class="info">
-                    <span>Python</span>
+                    <span>Python <small style="color: #0ef; font-size: 14px; font-style: italic;">(Basics)</small></span>
                 </div>
                 <div class="progress-line python">
                     <span></span>
                 </div>
             </div>
-
-             
-
-        </div>
-    </div>
+         </div>
+     </div>
 
     <div class="container1">
-    <h1 class="heading1">Professional Skills</h1>
-    <div class="radial-bars">
-        <div class="radial-bar">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">90%</div>
-            <div class="text">creativity</div>
-        </div>
-        <div class="radial-bar">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">65%</div>
-            <div class="text">Communication</div>
-        </div>
-        <div class="radial-bar">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">75%</div>
-            <div class="text">Problem Solving</div>
-        </div>
-        <div class="radial-bar">
-            <svg x="0px" y="0px" viewBox="0 0 200 200">
-                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-            </svg>
-            <div class="percentage">85%</div>
-            <div class="text">TeamWork</div>
+        <h1 class="heading1">Professional Skills</h1>
+        <div class="radial-bars">
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage"><i class='bx bx-bulb' style="font-size: 30px; color: #0ef;"></i></div>
+                <div class="text">Creativity</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage"><i class='bx bx-chat' style="font-size: 30px; color: #0ef;"></i></div>
+                <div class="text">Communication</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage"><i class='bx bx-check-shield' style="font-size: 30px; color: #0ef;"></i></div>
+                <div class="text">Problem Solving</div>
+            </div>
+            <div class="radial-bar">
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage"><i class='bx bx-group' style="font-size: 30px; color: #0ef;"></i></div>
+                <div class="text">TeamWork</div>
+            </div>
         </div>
     </div>
-</div>
 </section>
 <!-- projects -->
 
@@ -283,7 +279,22 @@
 
 
 
-
+<!-- home tabe btn -->
+ <div id="aboutModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 style="color: #0ef; text-align: center;">My Academic Journey</h2>
+    <div class="timeline">
+      <div class="time-item"><strong>2018-2019:</strong> DIT (Diploma in Info Tech) & Typing Skills</div>
+      <div class="time-item"><strong>2019:</strong> Matric Science</div>
+      <div class="time-item"><strong>2021:</strong> F.Sc (Computer Science)</div>
+      <div class="time-item"><strong>2021-2025:</strong> BS Computer Science (Graduation)
+        <p><small>Subjects: Python, C++, HTML, CSS, JS, Networking, Database</small></p>
+      </div>
+      <div class="time-item"><strong>Late 2025:</strong> Started Web Dev Training & Projects</div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -296,8 +307,7 @@
         <p id="modalDesc">Detailed description goes here...</p>
     </div>
 </div>
-    
-     <script src="script.js"></script>
      
+     <script   src="script.js"></script>
 </body>
 </html>
