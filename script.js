@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             if (aboutModal) {
                 aboutModal.style.display = "block";
-                document.body.style.overflow = "hidden";
+                document.body.style.overflow = "auto";
             }
         };
     }
@@ -49,9 +49,11 @@ document.querySelectorAll(".close, .close-btn").forEach(btn=>{
     btn.onclick=()=>{
         if(aboutModal) aboutModal.style.display ="none";
         if (serviceModal) serviceModal.style.display="none";
-        document.body.style.oveflow="auto";
-    };
+           document.body.style.oveflow="auto";
 
+        
+    };
+  
     });
 
     // SERVICES READ MORE
@@ -71,7 +73,7 @@ document.querySelectorAll(".close, .close-btn").forEach(btn=>{
                 
                 if(serviceModal) {
                     serviceModal.style.display = "block";
-                    document.body.style.overflow = "hidden";
+                    document.body.style.overflow = "auto";
                 }
             }
         };
